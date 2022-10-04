@@ -12,26 +12,5 @@ namespace MauiBugButtonRenderer.Platforms.Windows
 {
     public class MyButtonRenderer: ButtonRenderer
     {
-        protected override void OnElementChanged(ElementChangedEventArgs<Microsoft.Maui.Controls.Button> e)
-        {
-            base.OnElementChanged(e);
-
-            if (Control != null)
-            {
-                UpdateTooltip(Element as MyButton);
-            }
-        }
-
-        protected override void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e)
-        {
-            base.OnElementPropertyChanged(sender, e);
-        }
-
-        private void UpdateTooltip(MyButton button)
-        {
-            string tooltip = "Test";
-            if (Control != null && !String.IsNullOrEmpty(tooltip))
-                ToolTipService.SetToolTip(Control, tooltip);
-        }
     }
 }
