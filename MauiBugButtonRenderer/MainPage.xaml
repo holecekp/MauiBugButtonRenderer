@@ -4,24 +4,25 @@
              xmlns:local="clr-namespace:MauiBugButtonRenderer"
              x:Class="MauiBugButtonRenderer.MainPage">
 
-    <ScrollView>
-        <VerticalStackLayout
-            Spacing="30"
-            Padding="30,30">
+    <Grid RowDefinitions="Auto, *" ColumnDefinitions="*">
 
-            <StackLayout Orientation="Horizontal">
-                <Button Text="First button" />
-                <Button Text="Second button" />
-                <Button Text="Third button" />
-            </StackLayout>
+        <StackLayout Orientation="Horizontal"
+                     BackgroundColor="Silver"
+                     HorizontalOptions="FillAndExpand">
+                
+            <local:MyButton Text="A"
+                            WidthRequest="100" />
+            <local:MyButton Text="B"
+                            WidthRequest="100" />
+            <local:MyButton Text="C"
+                            WidthRequest="100" />
+            <Button Text="D"
+                    WidthRequest="100" />
+            <Button Text="E"
+                    WidthRequest="100" />
+            
+        </StackLayout>
 
-            <StackLayout Orientation="Horizontal">
-                <local:MyButton Text="First button" />
-                <local:MyButton Text="Second button" />
-                <local:MyButton Text="Third button" />
-            </StackLayout>
-
-        </VerticalStackLayout>
-    </ScrollView>
+    </Grid>
 
 </ContentPage>
